@@ -24,8 +24,8 @@ public class CardDeliveryTest {
         $("[data-test-id='name'] input").setValue("Пошехова-Ксения Анатольевна");
         $("[data-test-id='phone'] input").setValue("+79990009900");
         $("[data-test-id='agreement']").click();
-        $("button.button").click();
-        $(".notification").shouldBe(Condition.visible, Duration.ofSeconds(15))
+        $("button.button ").click();
+        $(".notification ").shouldBe(Condition.visible, Duration.ofSeconds(15))
                 .shouldHave(Condition.text("Встреча успешно забронирована на " + planningDate));
     }
 }
