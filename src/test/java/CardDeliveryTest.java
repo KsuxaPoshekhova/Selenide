@@ -16,7 +16,7 @@ public class CardDeliveryTest {
 
     @Test
     public void testCardDelivery() {
-        open("http://127.0.0.1:9999");
+        open("http://0.0.0.0:9999");
         $("[data-test-id='city'] input").setValue("Санкт-Петербург");
         String planningDate = generateDate(3, "dd.MM.yyyy");
         $("[data-test-id='date'] input").sendKeys(Keys.chord (Keys.SHIFT, Keys.HOME ) ,Keys.DELETE);
